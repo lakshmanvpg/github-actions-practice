@@ -1,0 +1,17 @@
+name: Validation Workflow
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validation
+        run: echo "Validation workflow running"
