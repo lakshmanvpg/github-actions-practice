@@ -1,0 +1,22 @@
+name: First GitHub Actions Practice
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display Hello Message
+        run: echo "Hello! My first GitHub Actions workflow is working."
+
+      - name: Display Date
+        run: date
+
+      - name: Display Current Directory
+        run: pwd
