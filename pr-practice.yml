@@ -1,0 +1,12 @@
+name: PR Practice
+
+on:
+  pull_request:
+
+jobs:
+  pr-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: PR Triggered
+        run: echo "Pull Request workflow triggered"
