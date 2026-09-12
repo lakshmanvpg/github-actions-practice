@@ -1,0 +1,21 @@
+name: Push Event Practice
+
+on:
+  push:
+
+jobs:
+  push-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show push message
+        run: echo "A push event triggered this workflow."
+
+      - name: Show branch
+        run: echo "Branch: ${{ github.ref_name }}"
+
+      - name: Show commit
+        run: echo "Commit: ${{ github.sha }}"
+
+      - name: Show user
+        run: echo "Pushed by: ${{ github.actor }}"
