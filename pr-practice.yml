@@ -1,7 +1,9 @@
-name: PR Practice
+name: PR Target Branch Practice
 
 on:
   pull_request:
+    branches:
+      - main
 
 jobs:
   pr-test:
@@ -9,4 +11,10 @@ jobs:
 
     steps:
       - name: PR Triggered
-        run: echo "Pull Request workflow triggered"
+        run: echo "Pull Request targeting main triggered"
+
+      - name: Show source branch
+        run: echo "Source Branch:${{ github.head_ref }}"
+
+      - name: Show target branch
+        run: echo "Target Branch:${{ github.base_ref }}"
