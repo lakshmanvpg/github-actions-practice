@@ -1,2 +1,1 @@
-# github-actions-practice
-My GitHub Actions practice lab
+This change is being tested through a Pull Request.
