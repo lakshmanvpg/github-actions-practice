@@ -1,15 +1,14 @@
-name: Push Event Practice123
+name: Tag Push Practice
 
 on:
   push:
-    paths:
-      - 'README.md'
-      - 'package.json'
-      - '.github/workflows/**'
+    tags:
+      - '*'
+
 jobs:
-  push-test:
+  tag-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Show push message
+      - name: Show tag
         run: echo "A push event triggered this workflow."
