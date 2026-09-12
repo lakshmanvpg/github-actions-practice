@@ -1,11 +1,11 @@
-name: Push Event Practice
+name: Push Event Practice123
 
 on:
   push:
-    branches-ignore:
-      - main
-      - develop
-
+    paths:
+      - 'README.md'
+      - 'package.json'
+      - '.github/workflows/**'
 jobs:
   push-test:
     runs-on: ubuntu-latest
