@@ -1,1 +1,1 @@
-I am learning GitHub Actions pull request triggers.
+Testing PR approval workflow.
