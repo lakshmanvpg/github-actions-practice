@@ -1,0 +1,15 @@
+name: Push Event Practice
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  push-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show push message
+        run: echo "A push to main triggered this workflow."
+
