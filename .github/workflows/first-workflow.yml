@@ -1,15 +1,17 @@
-name: Manual Practice
+name: Pull Request Practice
 
 on:
-  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  manual-test:
+  pull-request-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Show message
-        run: echo "I manually started this GitHub Actions workflow!"
+      - name: Show PR message
+        run: echo "GitHub Actions ran because a Pull Request was created or updated."
 
-      - name: Show date
-        run: date
+      - name: Show branch information
+        run: echo "This workflow is checking changes before merging into main."
