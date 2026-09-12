@@ -1,0 +1,21 @@
+name: Issue Automation
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  issue-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show issue details
+        run: |
+          echo "Issue automation started"
+          echo "Issue number: ${{ github.event.issue.number }}"
+          echo "Issue title: ${{ github.event.issue.title }}"
+          echo "Created by: ${{ github.event.issue.user.login }}"
+
+      - name: Finish
+        run: echo "Issue automation completed successfully"
