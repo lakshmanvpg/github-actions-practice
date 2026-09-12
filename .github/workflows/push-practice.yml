@@ -2,14 +2,14 @@ name: Push Event Practice
 
 on:
   push:
-    branches:
-      - 'feature/*'
+    branches-ignore:
+      - main
+      - develop
 
 jobs:
   push-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Show branch
-        run: echo "A push to main triggered this workflow."
-
+      - name: Show push message
+        run: echo "A push event triggered this workflow."
