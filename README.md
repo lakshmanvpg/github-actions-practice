@@ -1,1 +1,1 @@
-This change is being tested through a Pull Request.
+I am learning GitHub Actions pull request triggers.
