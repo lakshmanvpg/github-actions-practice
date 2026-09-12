@@ -1,0 +1,15 @@
+name: PR Branch Pattern Practice
+
+on:
+  pull_request:
+    branches:
+      - 'release-*'
+
+jobs:
+  pr-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: PR Triggered
+        run: echo "PR targeting a release branch triggered"
+
