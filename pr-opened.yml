@@ -11,4 +11,5 @@ jobs:
 
     steps:
       - name: PR Opened
-        run: echo "A new Pull Request was opened"
+        run: echo "A Pull Request was opened"
+
