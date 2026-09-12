@@ -3,13 +3,13 @@ name: Push Event Practice
 on:
   push:
     branches:
-      - main
+      - 'feature/*'
 
 jobs:
   push-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Show push message
+      - name: Show branch
         run: echo "A push to main triggered this workflow."
 
